@@ -1,0 +1,99 @@
+.header {
+    // background-color: rgba(169, 169, 169, 0.5);
+    // box-shadow: 4px 4px 10px black, -4px -4px 10px black;
+    // border-bottom-left-radius: 30%;
+    // border-top-right-radius: 30%;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: fixed;
+    z-index: 1;
+    padding: 2vh 0vh;
+    &__logoContainer {
+        width: 100%;
+        height: auto;
+        @include disfc;
+        grid-column: 2/3;
+        &__logo {
+            width: 100%;
+            height: auto;
+            @include disfc;
+            &__prop {
+                //opacity: 100%;
+                width: 25%;
+            }
+        }
+    }
+    &__menuContainer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        &__menu {
+            width: 100%;
+            height: auto;
+            @include disfc;
+            gap: 3vh;
+            &__item {
+                font-size: 14px;
+                color: white;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    background-color: white;
+                    color: black;
+                    padding: 1vh;
+                    border-radius: 2vh;
+                    transform: scale(1.2);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.headerMobile {
+    display: none;
+}
+@media (max-width: 480px) {
+.header {
+    display: none;
+}
+.headerMobile {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: fixed;
+    padding: 2vh 0vh;
+    &__logo {
+        width: 100%;
+        height: auto;
+        @include disfc;
+        &__prop {
+            width: 70%;
+        }
+    }
+    &__menu {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+        gap: 1vh;
+        &__linea {
+            width: 25%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1vh;
+            &__prop {
+                background-color: black;
+                width: 100%;
+                height: 0.5vh;
+                border-radius: 1vh;
+            }
+        }
+    }
+}
+}
