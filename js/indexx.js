@@ -153,6 +153,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.getElementById('logoWhatsapp').addEventListener('click', function () {
+  window.open("https://wa.me/5492926457583", "_blank");
+});
+
 // Selecciona los elementos que quieres animar
 const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
 
