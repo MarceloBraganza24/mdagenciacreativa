@@ -120,6 +120,7 @@
         height: auto;
         @include disfc;
         &__prop {
+            //display: none;
             width: 70%;
         }
     }

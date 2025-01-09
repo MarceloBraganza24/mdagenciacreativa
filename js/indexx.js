@@ -114,9 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Scroll hacia arriba: muestra el header
         header.style.top = '0';
         headerMobile.style.top = '0';
-    }
-    
-    if (window.scrollY === 0) {
+      }
+      
+      if (window.scrollY === 0) {
+        /* document.getElementById('logoConFondo').style.display = 'block'
+        document.getElementById('logoSinFondo').style.display = 'none' */
+
+        headerMobile.style.top = '0';
 
         btnHomeHeader.style.color = 'white';
         btnAboutHeader.style.color = 'white';
