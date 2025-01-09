@@ -1,15 +1,18 @@
-.header {
-    // background-color: rgba(169, 169, 169, 0.5);
-    // box-shadow: 4px 4px 10px black, -4px -4px 10px black;
-    // border-bottom-left-radius: 30%;
-    // border-top-right-radius: 30%;
+.header { 
+    //background-color: rgba(169, 169, 169, 0.5);
+    //background-color: rgb(253, 209, 0, 0.8);
+    //background-color: #fdd100;
+    //box-shadow: 4px 4px 10px black, -4px -4px 10px black;
+    //border-bottom-left-radius: 30%;
+    //border-top-right-radius: 30%;
     width: 100%;
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: fixed;
     z-index: 1;
-    padding: 2vh 0vh;
+    transition: top 0.5s ease-in-out;
+    padding: 1vh 0vh;
     &__logoContainer {
         width: 100%;
         height: auto;
@@ -22,6 +25,10 @@
             &__prop {
                 //opacity: 100%;
                 width: 25%;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    transform: scale(1.2);
+                }
             }
         }
     }
@@ -35,12 +42,17 @@
             @include disfc;
             gap: 3vh;
             &__item {
+                //background-color: #fdd100;
                 font-size: 14px;
-                color: white;
+                //color: black;
+                //color: white;
                 transition: all 0.2s ease-in-out;
+                //padding: 1vh;
+                //border-radius: 2vh;
+                //padding-right: 2vh;
                 &:hover {
-                    background-color: white;
-                    color: black;
+                    background-color: black;
+                    color: rgb(253, 209, 0);
                     padding: 1vh;
                     border-radius: 2vh;
                     transform: scale(1.2);
@@ -50,6 +62,9 @@
         }
     }
 }
+.menuOptionsContainer {
+    display: none;
+}
 .headerMobile {
     display: none;
 }
@@ -57,13 +72,49 @@
 .header {
     display: none;
 }
+.menuOptionsContainer {
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 14vh;
+    right: -1000px;
+    display: block;
+    border-top-left-radius: 20%;
+    z-index: 1;
+    transition: right 0.5s ease;
+    &.active {
+        right: 0; // Aparece desde la derecha
+    }
+    &__menuOptions {
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        padding: 4vh 0vh 2vh 0vh;
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+        &__item {
+            color: white;
+            letter-spacing: 0.5vh;
+            font-size: 16px;
+            gap: 1vh;
+            padding-left: 2vh;
+        }
+    }
+}
 .headerMobile {
+    background-color: rgb(253, 209, 0);
+    box-shadow: 4px 4px 10px black, -4px -4px 10px black;
+    border-bottom-left-radius: 30%;
     width: 100%;
     height: auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: fixed;
-    padding: 2vh 0vh;
+    padding: 1vh 0vh;
+    z-index: 1;
+    transition: top 0.5s ease-in-out;
     &__logo {
         width: 100%;
         height: auto;

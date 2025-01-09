@@ -1,5 +1,5 @@
 .footer {
-    background-color: #ccc;
+    background-color: #fdd100;
     width: 100%;
     height: auto;
     display: flex;
@@ -40,7 +40,8 @@
             &__networks {
                 width: 100%;
                 height: auto;
-                display: flex;
+                //display: flex;
+                @include disfc();
                 flex-direction: column;
                 text-align: center;
                 gap: 1vh;
@@ -83,7 +84,7 @@
 
 @media (max-width: 480px) {
 .footer {
-    background-color: #ccc;
+    background-color: #fdd100;
     width: 100%;
     height: auto;
     display: flex;
@@ -109,7 +110,7 @@
                     width: 100%;
                     height: auto;
                     &__prop {
-                        font-size: 12px;
+                        font-size: 10px;
                     }
                 }
             }

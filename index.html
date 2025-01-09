@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <header class="header" id="header">
+    <header class="header" id="headerMD">
 
         <div class="header__logoContainer">
             <div class="header__logoContainer__logo">
@@ -18,10 +18,10 @@
 
         <div class="header__menuContainer">
             <div class="header__menuContainer__menu">
-                <div id="homeBtn" class="header__menuContainer__menu__item">Inicio</div>
-                <div id="aboutBtn" class="header__menuContainer__menu__item">Quienes somos</div>
-                <div id="ourServicesBtn" class="header__menuContainer__menu__item">Nuestros servicios</div>
-                <div id="contactBtn" class="header__menuContainer__menu__item">Contactanos</div>
+                <div id="btnHomeHeader" class="header__menuContainer__menu__item">Inicio</div>
+                <div id="btnAboutHeader" class="header__menuContainer__menu__item">Quienes somos</div>
+                <div id="btnServicesHeader" class="header__menuContainer__menu__item">Nuestros servicios</div>
+                <div id="btnContactHeader" class="header__menuContainer__menu__item">Contactanos</div>
             </div>
         </div>
 
@@ -41,23 +41,34 @@
         </div>
     </div>
 
+    <div id="menuOptionsContainer" class="menuOptionsContainer">
+
+        <div class="menuOptionsContainer__menuOptions" id="menuOptions">
+            <div id="btnHomeHeaderMobile" class="menuOptionsContainer__menuOptions__item">- HOME</div>
+            <div id="btnAboutHeaderMobile" class="menuOptionsContainer__menuOptions__item">- QUIENES SOMOS</div>
+            <div id="btnServicesHeaderMobile" class="menuOptionsContainer__menuOptions__item">- SERVICIOS</div>
+            <div id="btnContactHeaderMobile" class="menuOptionsContainer__menuOptions__item">- CONTACTO</div>
+        </div>
+
+    </div>
+
     <main class="main">
 
         <div class="main__homeContainer">
 
             <div class="main__homeContainer__left">
                 <div class="main__homeContainer__left__cardContainer">
-                    <h1 class="main__homeContainer__left__cardContainer__title">¿Qué hace un Community Manager?</h1>
+                    <h1 class="main__homeContainer__left__cardContainer__title animate-on-scroll" data-animation="slide-in-left">¿Qué hace un Community Manager?</h1>
                     <div class="main__homeContainer__left__cardContainer__text">
-                        <p class="main__homeContainer__left__cardContainer__text__prop">El <strong>Community Manager</strong> es el puente entre tu marca y tu audiencia. Gestionar redes sociales, crear contenido atractivo, interactuar con tu comunidad y fortalecer la presencia digital de tu negocio.</p>
+                        <p class="main__homeContainer__left__cardContainer__text__prop animate-on-scroll" data-animation="slide-in-left">El <strong>Community Manager</strong> es el puente entre tu marca y tu audiencia. Gestionar redes sociales, crear contenido atractivo, interactuar con tu comunidad y fortalecer la presencia digital de tu negocio.</p>
                     </div>
                 </div>
             </div>
             <div class="main__homeContainer__right">
                 <div class="main__homeContainer__right__cardContainer">
-                    <h1 class="main__homeContainer__right__cardContainer__title">¿Material audiovisual?</h1>
+                    <h1 class="main__homeContainer__right__cardContainer__title animate-on-scroll" data-animation="slide-in-right">¿Material audiovisual?</h1>
                     <div class="main__homeContainer__right__cardContainer__text">
-                        <p class="main__homeContainer__right__cardContainer__text__prop">El material audiovisual para redes sociales es clave para captar la atención de los usuarios en un entorno visualmente competitivo. Combina imágenes, videos, gráficos y animaciones.</p>
+                        <p class="main__homeContainer__right__cardContainer__text__prop animate-on-scroll" data-animation="slide-in-right">El material audiovisual para redes sociales es clave para captar la atención de los usuarios en un entorno visualmente competitivo. Combina imágenes, videos, gráficos y animaciones.</p>
                     </div>
                 </div>
             </div>
@@ -86,7 +97,7 @@
 
         </div>
 
-        <div class="main__aboutContainer">
+        <div class="main__aboutContainer" id="aboutSection">
 
             <!-- <div class="main__aboutContainer__titleContainer">
                 <div class="main__aboutContainer__titleContainer__title">QUIÉNES SOMOS</div>
@@ -106,7 +117,7 @@
             
         </div>
 
-        <div class="main__servicesContainer">
+        <div class="main__servicesContainer" id="servicesSection">
 
             <div class="main__servicesContainer__titleContainer">
                 <div class="main__servicesContainer__titleContainer__title">NUESTROS SERVICIOS</div>
@@ -156,79 +167,85 @@
 
         </div>
         
-        <div class="main__contactContainer">
+        <div id="contactSection" class="main__contactContainer">
 
-            <div class="main__contactContainer__titleContainer">
-                <div class="main__contactContainer__titleContainer__title">CONTACTO</div>
-            </div>
+            
+            <div class="main__contactContainer__contact">
 
-            <div class="main__contactContainer__allContactContainer">
-
-                <div class="main__contactContainer__allContactContainer__dataContainer">
-
-                    <div class="main__contactContainer__allContactContainer__dataContainer__data box fade-in">
-                        
-                        <h2 class="main__contactContainer__allContactContainer__dataContainer__data__title">Info de contacto</h2>
-                        <h3 class="main__contactContainer__allContactContainer__dataContainer__data__prop">+54 9 2926 416137</h3>
-                        <h3 class="main__contactContainer__allContactContainer__dataContainer__data__prop">mdagenciacreativa@gmail.com</h3>
-
-                    </div>
-
+                <div class="main__contactContainer__contact__titleContainer">
+    
+                    <div class="main__contactContainer__contact__titleContainer__title animate-on-scroll" data-animation="scale-up">~ CONTACTO ~</div>
+    
                 </div>
 
-                <div class="main__contactContainer__allContactContainer__formContainer">
+                <div class="main__contactContainer__contact__info">
                     
-                    <div class="main__contactContainer__allContactContainer__formContainer__form">
+                    <div class="main__contactContainer__contact__info__myData">
 
-                        <div class="main__contactContainer__allContactContainer__formContainer__form__phrase">Envianos aquí tu consulta por correo electrónico</div>
-
-                        <div class="main__contactContainer__allContactContainer__formContainer__form__item">
-
-                            <div class="main__contactContainer__allContactContainer__formContainer__form__item__left">
-                                <h4 class="main__contactContainer__allContactContainer__formContainer__form__item__left__label">Nombre *</h4>
-                                <div class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer">
-                                    <input id="inputFirstNameContact" class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer__input" type="text">
-                                </div>
-                            </div>
-
-                            <div class="main__contactContainer__allContactContainer__formContainer__form__item__left">
-                                <h4 class="main__contactContainer__allContactContainer__formContainer__form__item__left__label">Apellido *</h4>
-                                <div class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer">
-                                    <input id="inputLastNameContact" class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer__input" type="text">
-                                </div>
-                            </div>
-                            
+                        <div class="main__contactContainer__contact__info__myData__data animate-on-scroll" data-animation="slide-in-left">
+                            <div class="main__contactContainer__contact__info__myData__data__prop">+54 9 2926 457583</div>
+                            <div class="main__contactContainer__contact__info__myData__data__prop">mdagenciacreativa@gmail.com</div>
                         </div>
 
-                        <div class="main__contactContainer__allContactContainer__formContainer__form__item">
+                        <div class="main__contactContainer__contact__info__myData__dataMobile animate-on-scroll" data-animation="scale-up">
+                            <div class="main__contactContainer__contact__info__myData__dataMobile__prop">+54 9 2926 457583</div>
+                            <div class="main__contactContainer__contact__info__myData__dataMobile__prop">mdagenciacreativa@gmail.com</div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="main__contactContainer__contact__info__formContainer">
+                        
+                        <div class="main__contactContainer__contact__info__formContainer__form animate-on-scroll" data-animation="scale-up">
+    
+                            <div style="padding-top: 4vh;" class="main__contactContainer__contact__info__formContainer__form__title">
+                                <div class="main__contactContainer__contact__info__formContainer__form__title__prop">Dejanos aquí tu consulta!</div>
+                            </div>
 
-                            <div class="main__contactContainer__allContactContainer__formContainer__form__item__left">
-                                <h4 class="main__contactContainer__allContactContainer__formContainer__form__item__left__label">Correo electrónico *</h4>
-                                <div class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer">
-                                    <input class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer__input" type="email">
+                            <div class="main__contactContainer__contact__info__formContainer__form__labels">
+                                <div class="main__contactContainer__contact__info__formContainer__form__labels__label">Nombre *</div>
+                                <div class="main__contactContainer__contact__info__formContainer__form__labels__label">Apellido *</div>
+                            </div>
+    
+                            <div class="main__contactContainer__contact__info__formContainer__form__inputs">
+                                <div class="main__contactContainer__contact__info__formContainer__form__inputs__input">
+                                    <input id="inputFirstNameContactForm" type="text" class="main__contactContainer__contact__info__formContainer__form__inputs__input__prop">
+                                </div>
+                                <div class="main__contactContainer__contact__info__formContainer__form__inputs__input">
+                                    <input id="inputLastNameContactForm" type="text" class="main__contactContainer__contact__info__formContainer__form__inputs__input__prop">
                                 </div>
                             </div>
-
-                            <div class="main__contactContainer__allContactContainer__formContainer__form__item__left">
-                                <h4 class="main__contactContainer__allContactContainer__formContainer__form__item__left__label">Teléfono *</h4>
-                                <div class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer">
-                                    <input id="inputPhoneContact" class="main__contactContainer__allContactContainer__formContainer__form__item__left__inputContainer__input" type="text">
+    
+                            <div style="padding-top: 4vh;" class="main__contactContainer__contact__info__formContainer__form__labels">
+                                <div class="main__contactContainer__contact__info__formContainer__form__labels__label">Email *</div>
+                                <div class="main__contactContainer__contact__info__formContainer__form__labels__label">Teléfono *</div>
+                            </div>
+    
+                            <div class="main__contactContainer__contact__info__formContainer__form__inputs">
+                                <div class="main__contactContainer__contact__info__formContainer__form__inputs__input">
+                                    <input id="inputEmailContactForm" type="email" class="main__contactContainer__contact__info__formContainer__form__inputs__input__prop">
+                                </div>
+                                <div class="main__contactContainer__contact__info__formContainer__form__inputs__input">
+                                    <input id="inputPhoneContactForm" type="text" class="main__contactContainer__contact__info__formContainer__form__inputs__input__prop">
                                 </div>
                             </div>
-
-                        </div>
-
-                        <div class="main__contactContainer__allContactContainer__formContainer__form__msjContainer">
-                            <h4 class="main__contactContainer__allContactContainer__formContainer__form__msjContainer__label">Mensaje *</h4>
-                            <div class="main__contactContainer__allContactContainer__formContainer__form__msjContainer__textAreaContainer">
-                                <textarea class="main__contactContainer__allContactContainer__formContainer__form__msjContainer__textAreaContainer__textArea" name="" id=""></textarea>
+    
+                            <div style="padding-top: 4vh;" class="main__contactContainer__contact__info__formContainer__form__labelMsj">
+                                <div class="main__contactContainer__contact__info__formContainer__form__labelMsj__label">Mensaje *</div>
                             </div>
+    
+                            <div class="main__contactContainer__contact__info__formContainer__form__textAreaContainer">
+                                <textarea id="inputTextAreaContactForm" class="main__contactContainer__contact__info__formContainer__form__textAreaContainer__textArea" name="" id=""></textarea>
+                            </div>
+    
+                            <div class="main__contactContainer__contact__info__formContainer__form__btnContainer">
+    
+                                <button id="btnSubmitContactForm" class="main__contactContainer__contact__info__formContainer__form__btnContainer__btn">Enviar</button>
+    
+                            </div>
+    
                         </div>
-
-                        <div class="main__contactContainer__allContactContainer__formContainer__form__btnContainer">
-                            <button class="main__contactContainer__allContactContainer__formContainer__form__btnContainer__btn">Enviar</button>
-                        </div>
-
+    
                     </div>
 
                 </div>
@@ -250,6 +267,9 @@
                         <div id="btnHomeFooter" class="footer__dataContainer__data__nav__item__prop">HOME</div>
                     </div>
                     <div class="footer__dataContainer__data__nav__item">
+                        <div id="btnAboutFooter" class="footer__dataContainer__data__nav__item__prop">QUIENES SOMOS</div>
+                    </div>
+                    <div class="footer__dataContainer__data__nav__item">
                         <div id="btnServicesFooter" class="footer__dataContainer__data__nav__item__prop">SERVICIOS</div>
                     </div>
                     <div class="footer__dataContainer__data__nav__item">
@@ -264,7 +284,7 @@
                             <img class="footer__dataContainer__data__networks__item__logoContainer__logo" src="img/logo_insta.png" alt="">
                         </div>
                         <div class="footer__dataContainer__data__networks__item__network">
-                            <a style="text-decoration: none; color: black;" href='https://www.instagram.com/mb_solucionesinformaticas/profilecard/?igsh=MXJpcXl1cW01b3p3NA==' className='footer__dataContainer__data__networks__item__network__prop'>@mdagenciacreativa</a>
+                            <a style="text-decoration: none; color: black;" href='https://www.instagram.com/mdagenciacreativa?igsh=MXR4ODFlbHJ5bjQxZw==' className='footer__dataContainer__data__networks__item__network__prop'>@mdagenciacreativa</a>
                         </div>
                     </div>
 
@@ -273,7 +293,7 @@
                             <img class="footer__dataContainer__data__networks__item__logoContainer__logo" src="img/logo_face.png" alt="">
                         </div>
                         <div class="footer__dataContainer__data__networks__item__network">
-                            <a style="text-decoration: none; color: black;" href='https://www.facebook.com/share/j2AbDvTGfGV81avT/?mibextid=LQQJ4d' className='footer__dataContainer__data__networks__item__network__prop'>MD Agencia Creativa</a>
+                            <a style="text-decoration: none; color: black;" href='https://www.facebook.com/share/157pmLkdeQ/?mibextid=wwXIfr' className='footer__dataContainer__data__networks__item__network__prop'>MD Agencia Creativa</a>
                         </div>
                     </div>
 
@@ -291,7 +311,7 @@
 
     </footer>
 
-    <script src="js/index.js"></script>
+    <script src="js/indexx.js"></script>
     
 </body>
 </html>
