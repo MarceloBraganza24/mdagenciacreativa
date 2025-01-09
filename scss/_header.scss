@@ -27,7 +27,7 @@
                 width: 25%;
                 transition: all 0.2s ease-in-out;
                 &:hover {
-                    transform: scale(1.2);
+                    transform: scale(1.05);
                 }
             }
         }
@@ -45,16 +45,16 @@
                 //background-color: #fdd100;
                 font-size: 14px;
                 //color: black;
-                //color: white;
+                color: white;
                 transition: all 0.2s ease-in-out;
                 //padding: 1vh;
                 //border-radius: 2vh;
                 //padding-right: 2vh;
                 &:hover {
-                    background-color: black;
-                    color: rgb(253, 209, 0);
-                    padding: 1vh;
-                    border-radius: 2vh;
+                    //background-color: black;
+                    //color: rgb(253, 209, 0);
+                    //padding: 1vh;
+                    //border-radius: 2vh;
                     transform: scale(1.2);
                     cursor: pointer;
                 }
@@ -104,9 +104,9 @@
     }
 }
 .headerMobile {
-    background-color: rgb(253, 209, 0);
-    box-shadow: 4px 4px 10px black, -4px -4px 10px black;
-    border-bottom-left-radius: 30%;
+    //background-color: #fdd100;
+    //box-shadow: 4px 4px 10px black, -4px -4px 10px black;
+    //border-bottom-left-radius: 30%;
     width: 100%;
     height: auto;
     display: grid;
@@ -139,7 +139,7 @@
             flex-direction: column;
             gap: 1vh;
             &__prop {
-                background-color: black;
+                background-color: white;
                 width: 100%;
                 height: 0.5vh;
                 border-radius: 1vh;

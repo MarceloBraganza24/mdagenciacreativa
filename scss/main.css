@@ -73,15 +73,27 @@
   animation: rotateIn 1s ease-out forwards;
 }
 
+.networksContainer {
+  width: 100px;
+  position: fixed;
+  z-index: 1;
+  bottom: 2vh;
+  right: 2vh;
+}
+.networksContainer__network {
+  width: 90%;
+  transition: transform 0.3s ease-in-out;
+}
+.networksContainer__network:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
 .main {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
-  /* &__contactContainer {
-      width: 100%;
-      height: 1000px;
-  } */
 }
 .main__homeContainerMobile {
   display: none;
@@ -219,6 +231,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 0vh;
 }
 .main__aboutContainer__aboutTextContainer__textContainer__text {
   background-color: rgba(253, 209, 0, 0.9);
@@ -268,6 +281,7 @@
 .main__servicesContainer__titleContainer__title {
   font-size: 30px;
   padding-right: 10vh;
+  font-weight: bold;
 }
 .main__servicesContainer__cardsContainer {
   width: 100%;
@@ -384,7 +398,6 @@
 .main__contactContainer {
   width: 100%;
   height: auto;
-  padding-top: 1vh;
 }
 .main__contactContainer__contact {
   background-image: url("../img/fondo_contacto.png");
@@ -397,7 +410,6 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  box-shadow: 10px 10px 10px black, -4px -4px 10px black;
 }
 .main__contactContainer__contact__titleContainer {
   width: 100%;
@@ -410,13 +422,13 @@
 }
 .main__contactContainer__contact__titleContainer__title {
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   font-family: sans-serif;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   border-radius: 20vh;
   padding: 4vh 0vh;
   font-weight: bold;
-  color: white;
+  color: black;
 }
 .main__contactContainer__contact__info {
   width: 100%;
@@ -583,7 +595,7 @@
   transition: all 0.2s ease-in-out;
 }
 .header__logoContainer__logo__prop:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 .header__menuContainer {
   width: 100%;
@@ -600,13 +612,10 @@
 }
 .header__menuContainer__menu__item {
   font-size: 14px;
+  color: white;
   transition: all 0.2s ease-in-out;
 }
 .header__menuContainer__menu__item:hover {
-  background-color: black;
-  color: rgb(253, 209, 0);
-  padding: 1vh;
-  border-radius: 2vh;
   transform: scale(1.2);
   cursor: pointer;
 }
@@ -655,9 +664,6 @@
     padding-left: 2vh;
   }
   .headerMobile {
-    background-color: rgb(253, 209, 0);
-    box-shadow: 4px 4px 10px black, -4px -4px 10px black;
-    border-bottom-left-radius: 30%;
     width: 100%;
     height: auto;
     display: grid;
@@ -695,7 +701,7 @@
     gap: 1vh;
   }
   .headerMobile__menu__linea__prop {
-    background-color: black;
+    background-color: white;
     width: 100%;
     height: 0.5vh;
     border-radius: 1vh;
@@ -758,14 +764,13 @@
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
 }
 .footer__dataContainer__data__networks__item__logoContainer {
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
 }
 .footer__dataContainer__data__networks__item__logoContainer__logo {
   width: 40%;
@@ -842,17 +847,16 @@
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr;
   }
   .footer__dataContainer__data__networks__item__logoContainer {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
   }
   .footer__dataContainer__data__networks__item__logoContainer__logo {
-    width: 50%;
+    width: 40%;
   }
   .footer__dataContainer__data__networks__item__network {
     width: 100%;
@@ -878,15 +882,26 @@
   }
 }
 @media (max-width: 480px) {
+  .networksContainer {
+    width: 55px;
+    position: fixed;
+    z-index: 1;
+    bottom: 2vh;
+    right: 2vh;
+  }
+  .networksContainer__network {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  .networksContainer__network:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
   .main {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    /* &__contactContainer {
-        width: 100%;
-        height: 1000px;
-    } */
   }
   .main__homeContainer {
     display: none;
@@ -894,9 +909,7 @@
   .main__homeContainerMobile {
     background-image: url("../img/fondo_home_mobile.jpg");
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-attachment: scroll;
     overflow: hidden;
     width: 100%;
     height: 100vh;
@@ -1025,6 +1038,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 8vh;
   }
   .main__aboutContainer__aboutTextContainer__textContainer__text {
     background-color: rgba(253, 209, 0, 0.9);
@@ -1055,6 +1069,7 @@
   .main__servicesContainer {
     background-image: url("../img/fondoAguaMontaña.jpg");
     background-size: cover;
+    background-attachment: scroll;
     width: 100%;
     height: auto;
   }
@@ -1074,8 +1089,6 @@
   .main__servicesContainer__cardsContainer {
     width: 100%;
     height: auto;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
     display: flex;
     flex-direction: column;
   }
@@ -1192,18 +1205,14 @@
     padding-top: 0vh;
   }
   .main__contactContainer__contact {
-    background-image: url("../img/fondo_contacto.png");
+    background-image: url("../img/fondo_contacto_mobile.jpg");
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
+    background-attachment: scroll;
     overflow: hidden;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    margin-top: 2vh;
   }
   .main__contactContainer__contact__titleContainer {
     width: 100%;
@@ -1214,12 +1223,12 @@
   }
   .main__contactContainer__contact__titleContainer__title {
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-family: sans-serif;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     border-radius: 20vh;
     padding: 4vh 10vh;
-    color: white;
+    color: black;
   }
   .main__contactContainer__contact__info {
     width: 100%;
@@ -1257,7 +1266,7 @@
     padding: 5vh 0vh;
   }
   .main__contactContainer__contact__info__formContainer__form {
-    width: 80%;
+    width: 70%;
     height: auto;
     padding: 0vh 4vh 5vh 4vh;
     border-radius: 5vh;
@@ -1282,7 +1291,7 @@
     padding-top: 1vh;
   }
   .main__contactContainer__contact__info__formContainer__form__labels__label {
-    font-size: 14px;
+    font-size: 12px;
   }
   .main__contactContainer__contact__info__formContainer__form__inputs {
     width: 100%;
@@ -1301,8 +1310,8 @@
   }
   .main__contactContainer__contact__info__formContainer__form__inputs__input__prop {
     width: 100%;
-    height: 30px;
-    font-size: 14px;
+    height: 25px;
+    font-size: 12px;
     border-radius: 1vh;
     border: none;
   }
@@ -1312,7 +1321,7 @@
     padding-top: 1vh;
   }
   .main__contactContainer__contact__info__formContainer__form__labelMsj__label {
-    font-size: 14px;
+    font-size: 12px;
   }
   .main__contactContainer__contact__info__formContainer__form__textAreaContainer {
     width: 100%;
@@ -1324,8 +1333,8 @@
   }
   .main__contactContainer__contact__info__formContainer__form__textAreaContainer__textArea {
     width: 90%;
-    height: 100px;
-    font-size: 14px;
+    height: 80px;
+    font-size: 12px;
     border-radius: 1vh;
   }
   .main__contactContainer__contact__info__formContainer__form__btnContainer {

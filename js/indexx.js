@@ -94,7 +94,6 @@ btnContactFooter.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('headerMD');
-    const menuOptions = document.getElementById('menuOptions');
     let lastScrollY = window.scrollY;
   
     window.addEventListener('scroll', () => {
@@ -102,33 +101,52 @@ document.addEventListener('DOMContentLoaded', () => {
   
       if (currentScrollY > lastScrollY) {
         // Scroll hacia abajo: oculta el header
-        //header.style.transform = 'translateY(-100%)';
         
         header.style.top = '-18vh';
         header.style.backgroundColor = "#fdd100";
         header.style.boxShadow = "4px 4px 10px black, -4px -4px 10px black";
         header.style.borderBottomLeftRadius = "30%";
-        //box-shadow: 4px 4px 10px black, -4px -4px 10px black;
-        //border-bottom-left-radius: 30%;
-        headerMobile.style.top = '-12vh';
+        headerMobile.style.top = '-14vh';
         headerMobile.style.backgroundColor = "#fdd100";
+        headerMobile.style.boxShadow = "4px 4px 10px black, -4px -4px 10px black";
+        headerMobile.style.borderBottomLeftRadius = "30%";
     } else {
         // Scroll hacia arriba: muestra el header
-        //header.style.transform = 'translateY(0)';
         header.style.top = '0';
         headerMobile.style.top = '0';
     }
     
     if (window.scrollY === 0) {
-        
-        //menuOptions.style.display = "none";
+
+        btnHomeHeader.style.color = 'white';
+        btnAboutHeader.style.color = 'white';
+        btnServicesHeader.style.color = 'white';
+        btnContactHeader.style.color = 'white';
+      
+        const linea1 = document.getElementById('linea1');
+        const linea2 = document.getElementById('linea2');
+        const linea3= document.getElementById('linea3');
+        linea1.style.backgroundColor = 'white';
+        linea2.style.backgroundColor = 'white';
+        linea3.style.backgroundColor = 'white';
+
         header.style.backgroundColor = "transparent";
         header.style.boxShadow = "none";
-        //header.menuContainer.style.color = "white";
         headerMobile.style.backgroundColor = "transparent";
         headerMobile.style.boxShadow = "none";
-        //document.getElementById('btnHomeHeaderMobile').style.backgroundColor = 'white'
   
+      } else {
+        btnHomeHeader.style.color = 'black';
+        btnAboutHeader.style.color = 'black';
+        btnServicesHeader.style.color = 'black';
+        btnContactHeader.style.color = 'black';
+
+        const linea1 = document.getElementById('linea1');
+        const linea2 = document.getElementById('linea2');
+        const linea3= document.getElementById('linea3');
+        linea1.style.backgroundColor = 'black';
+        linea2.style.backgroundColor = 'black';
+        linea3.style.backgroundColor = 'black';
       }
   
       lastScrollY = currentScrollY;
@@ -155,3 +173,29 @@ const observer = new IntersectionObserver((entries) => {
 
 // Asocia el observador a cada elemento
 elementsToAnimate.forEach(element => observer.observe(element));
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hmenu = document.getElementById('hmenu');
+  const menuOptionsContainer = document.getElementById('menuOptionsContainer');
+
+  // Variable para rastrear si el div está activo
+  let isActive = false;
+
+  // Evento para mostrar/ocultar el div al presionar el botón
+  hmenu.addEventListener('click', () => {
+    isActive = !isActive;
+    if (isActive) {
+      menuOptionsContainer.classList.add('active');
+    } else {
+      menuOptionsContainer.classList.remove('active');
+    }
+  });
+
+  // Evento para ocultar el div al hacer scroll
+  window.addEventListener('scroll', () => {
+    if (isActive) {
+      menuOptionsContainer.classList.remove('active');
+      isActive = false; // Actualiza el estado
+    }
+  });
+});

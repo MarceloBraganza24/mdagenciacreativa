@@ -40,7 +40,6 @@
             &__networks {
                 width: 100%;
                 height: auto;
-                //display: flex;
                 @include disfc();
                 flex-direction: column;
                 text-align: center;
@@ -49,11 +48,12 @@
                     width: 100%;
                     height: auto;
                     display: grid;
-                    grid-template-columns: 1fr 3fr;
+                    grid-template-columns: 1fr 2fr;
                     &__logoContainer {
                         width: 100%;
                         height: auto;
-                        @include disfc();
+                        display: flex;
+                        justify-content: end;
                         &__logo {
                             width: 40%;
                         }
@@ -125,13 +125,15 @@
                     width: 100%;
                     height: auto;
                     display: grid;
-                    grid-template-columns: 1fr 3fr;
+                    grid-template-columns: 1fr 2fr;
                     &__logoContainer {
                         width: 100%;
                         height: auto;
-                        @include disfc();
+                        display: flex;
+                        justify-content: end;
+                        //@include disfc();
                         &__logo {
-                            width: 50%;
+                            width: 40%;
                         }
                     }
                     &__network {
