@@ -177,6 +177,10 @@ document.addEventListener('DOMContentLoaded', () => {
         headerMobile.style.backgroundColor = "#fdd100";
         headerMobile.style.boxShadow = "4px 4px 10px black, -4px -4px 10px black";
         headerMobile.style.borderBottomLeftRadius = "30%";
+        document.getElementById('logoConFondo').style.display = 'none'
+        document.getElementById('logoSinFondo').style.display = 'block'
+        document.getElementById('logoConFondoMobile').style.display = 'none'
+        document.getElementById('logoSinFondoMobile').style.display = 'block'
       } else {
         // Scroll hacia arriba: muestra el header
         header.style.top = '0';
