@@ -1,3 +1,67 @@
+emailjs.init('EayN_WhMM0ojL_olQ'); // Reemplaza con tu User ID de EmailJS
+
+const inputPhoneContactForm = document.getElementById('inputPhoneContactForm');
+inputPhoneContactForm.addEventListener('input', (event) => {
+  const value = event.target.value;
+  event.target.value = value.replace(/[^0-9]/g, '');
+});
+const inputFirstNameContactForm = document.getElementById('inputFirstNameContactForm');
+    inputFirstNameContactForm.addEventListener('input', (event) => {
+    const regex = /^[a-zA-Z]*$/;
+    const value = event.target.value;
+    if (!regex.test(value)) {
+      event.target.value = value.replace(/[^a-zA-Z]/g, '');
+    }
+});
+const inputLastNameContactForm = document.getElementById('inputLastNameContactForm');
+inputLastNameContactForm.addEventListener('input', (event) => {
+    const regex = /^[a-zA-Z]*$/;
+    const value = event.target.value;
+    if (!regex.test(value)) {
+        event.target.value = value.replace(/[^a-zA-Z]/g, '');
+    }
+});
+const inputEmailContactForm = document.getElementById('inputEmailContactForm');
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+document.getElementById("btnSubmitContactForm").addEventListener("click", () => {
+
+    const inputFirstNameContactForm = document.getElementById('inputFirstNameContactForm').value;
+    const inputLastNameContactForm = document.getElementById('inputLastNameContactForm').value;
+    const inputEmailContactForm = document.getElementById('inputEmailContactForm').value;
+    const inputPhoneContactForm = document.getElementById('inputPhoneContactForm').value;
+    const inputTextAreaContactForm = document.getElementById('inputTextAreaContactForm').value;
+
+    if(inputFirstNameContactForm == '' || inputLastNameContactForm == '' || inputEmailContactForm == '' || inputPhoneContactForm == '' || inputTextAreaContactForm == '') {
+        alert('¡Debes completar todos los campos!');
+    } else if (inputEmailContactForm && !emailRegex.test(inputEmailContactForm)) {
+          alert('El formato del correo no es válido, ingrese otro');
+    } else {
+        emailjs.send('service_yx7qyog', 'template_43m480h', {
+            first_name: inputFirstNameContactForm,
+            last_name: inputLastNameContactForm,
+            email: inputEmailContactForm,
+            phone: inputPhoneContactForm,
+            message: inputTextAreaContactForm
+        })
+        .then(function(response) {
+            console.log('Mensaje enviado:', response);
+            document.getElementById('inputFirstNameContactForm').value = '';
+            document.getElementById('inputLastNameContactForm').value = '';
+            document.getElementById('inputEmailContactForm').value = '';
+            document.getElementById('inputPhoneContactForm').value = '';
+            document.getElementById('inputTextAreaContactForm').value = '';
+            alert('¡Tu mensaje ha sido enviado correctamente!');
+        }, function(error) {
+            console.log('Error al enviar el mensaje:', error);
+            alert('Hubo un problema al enviar tu mensaje. Intenta nuevamente.');
+        });
+    }
+
+});
+
+
+
 const btnHomeHeader = document.getElementById('btnHomeHeader');
 const btnHomeHeaderMobile = document.getElementById('btnHomeHeaderMobile');
 const btnHomeFooter = document.getElementById('btnHomeFooter');
