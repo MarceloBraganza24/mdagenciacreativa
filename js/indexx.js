@@ -17,6 +17,9 @@ const btnContactHeaderMobile = document.getElementById('btnContactHeaderMobile')
 const btnContactFooter = document.getElementById('btnContactFooter');
 const contactSection = document.getElementById('contactSection');
 
+document.getElementById('logoSinFondo').style.display = 'none'
+document.getElementById('logoSinFondoMobile').style.display = 'none'
+
 btnAboutHeader.addEventListener('click', () => {
     aboutSection.scrollIntoView({
       behavior: 'smooth', 
@@ -106,19 +109,25 @@ document.addEventListener('DOMContentLoaded', () => {
         header.style.backgroundColor = "#fdd100";
         header.style.boxShadow = "4px 4px 10px black, -4px -4px 10px black";
         header.style.borderBottomLeftRadius = "30%";
-        headerMobile.style.top = '-14vh';
+        headerMobile.style.top = '-13vh';
         headerMobile.style.backgroundColor = "#fdd100";
         headerMobile.style.boxShadow = "4px 4px 10px black, -4px -4px 10px black";
         headerMobile.style.borderBottomLeftRadius = "30%";
-    } else {
+      } else {
         // Scroll hacia arriba: muestra el header
         header.style.top = '0';
         headerMobile.style.top = '0';
+        document.getElementById('logoConFondo').style.display = 'none'
+        document.getElementById('logoSinFondo').style.display = 'block'
+        document.getElementById('logoConFondoMobile').style.display = 'none'
+        document.getElementById('logoSinFondoMobile').style.display = 'block'
       }
       
       if (window.scrollY === 0) {
-        /* document.getElementById('logoConFondo').style.display = 'block'
-        document.getElementById('logoSinFondo').style.display = 'none' */
+        document.getElementById('logoConFondo').style.display = 'block'
+        document.getElementById('logoSinFondo').style.display = 'none'
+        document.getElementById('logoConFondoMobile').style.display = 'block'
+        document.getElementById('logoSinFondoMobile').style.display = 'none'
 
         headerMobile.style.top = '0';
 

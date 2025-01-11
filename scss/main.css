@@ -597,6 +597,14 @@
 .header__logoContainer__logo__prop:hover {
   transform: scale(1.05);
 }
+.header__logoContainer__logo__propSinFondo {
+  width: 20%;
+  transition: all 0.2s ease-in-out;
+  padding: 2vh 0vh;
+}
+.header__logoContainer__logo__propSinFondo:hover {
+  transform: scale(1.05);
+}
 .header__menuContainer {
   width: 100%;
   height: auto;
@@ -682,6 +690,10 @@
   }
   .headerMobile__logo__prop {
     width: 70%;
+  }
+  .headerMobile__logo__propSinFondo {
+    width: 50%;
+    padding: 2vh 0vh;
   }
   .headerMobile__menu {
     width: 100%;
@@ -925,7 +937,7 @@
   }
   .main__homeContainerMobile__up__cardContainer {
     background-color: rgba(169, 169, 169, 0.5);
-    width: 75%;
+    width: 85%;
     height: auto;
     padding: 2vh 4vh;
     border-bottom-right-radius: 20%;
@@ -938,8 +950,8 @@
     border-top-left-radius: 2vh;
     border-top-right-radius: 2vh;
     border-radius: 2vh;
-    padding: 1vh 0vh 0vh 0vh;
-    font-size: 16px;
+    padding: 2vh 0vh 2vh 0vh;
+    font-size: 15px;
   }
   .main__homeContainerMobile__up__cardContainer__text {
     width: 100%;
@@ -955,7 +967,7 @@
     font-size: 14px;
     border-bottom-left-radius: 2vh;
     border-bottom-right-radius: 2vh;
-    padding: 1vh 2vh 2vh 2vh;
+    padding: 0vh 2vh 2vh 2vh;
   }
   .main__homeContainerMobile__down {
     width: 100%;
