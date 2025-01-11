@@ -169,11 +169,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentScrollY > lastScrollY) {
         // Scroll hacia abajo: oculta el header
         
-        header.style.top = '-18vh';
+        header.style.top = '-14vh';
         header.style.backgroundColor = "#fdd100";
         header.style.boxShadow = "4px 4px 10px black, -4px -4px 10px black";
         header.style.borderBottomLeftRadius = "30%";
-        headerMobile.style.top = '-13vh';
+        headerMobile.style.top = '-10vh';
         headerMobile.style.backgroundColor = "#fdd100";
         headerMobile.style.boxShadow = "4px 4px 10px black, -4px -4px 10px black";
         headerMobile.style.borderBottomLeftRadius = "30%";
