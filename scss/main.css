@@ -961,7 +961,7 @@
     display: flex;
     align-items: center;
     color: white;
-    padding-top: 40vh;
+    padding-top: 30vh;
   }
   .main__homeContainerMobile__up__cardContainer {
     background-color: rgba(0, 0, 0, 0.5);
@@ -988,7 +988,7 @@
   }
   .main__homeContainerMobile__up__cardContainer__text__prop {
     width: 95%;
-    font-size: 18px;
+    font-size: 22px;
     border-bottom-left-radius: 2vh;
     border-bottom-right-radius: 2vh;
     padding: 0vh;
